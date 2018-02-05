@@ -6,15 +6,18 @@
   "scripts": {
     "ng": "ng",
     "build": "ng build",
-    "start": "ng serve",
     "test": "ng test",
     "lint": "tslint ./src/**/*.ts -t verbose",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "ng build --aot -prod",
+    "start": "node server.js",
+    "deploy": "git push origin master && git push heroku master"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@angular/cli": "1.5.0",
     "@angular/animations": "~5.0.0",
     "@angular/common": "~5.0.0",
     "@angular/compiler": "~5.0.0",
@@ -35,7 +38,6 @@
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
-    "@angular/cli": "1.5.0",
     "@types/jasmine": "~2.5.53",
     "@types/jasminewd2": "^2.0.3",
     "@types/node": "^6.0.45",
@@ -54,5 +56,9 @@
     "tslint": "^5.0.0",
     "typescript": "2.4.2"
   },
-  "repository": {}
+  "repository": {},
+  "engines": {
+    "node": "9.2.0",
+    "npm": "5.6.0"
+  }
 }
