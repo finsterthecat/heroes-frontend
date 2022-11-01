@@ -43,7 +43,7 @@
     "@types/jasmine": "~2.5.53",
     "@types/jasminewd2": "^2.0.3",
     "@types/node": "^6.0.45",
-    "jasmine": "~2.4.1",
+    "jasmine": "~2.99.0",
     "jasmine-core": "~2.4.1",
     "karma": "^6.4.1",
     "karma-chrome-launcher": "^2.0.0",
